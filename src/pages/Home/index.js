@@ -8,8 +8,6 @@ class HomePage extends Component {
       <>
         <h1 style={{ color: '#888f9b' }}>Home Page</h1>
         <CardList />
-        <CardList />
-        <CardList />
       </>
     )
   }

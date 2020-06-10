@@ -1,15 +1,19 @@
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 
-import { Card } from './style'
+import { Card, CardImageWrapper, CardImage } from './style'
 
-function ProductCard() {
-  const [show, setShow] = useState(false)
-
-  const toggleMenu = () => {
-    setShow(!show)
-  }
-
-  return <Card>Card</Card>
+const ProductCard = ({ img, title, autor }) => {
+  return (
+    <Card>
+      <CardImageWrapper
+      // style={{
+      //   background: `url("https://cdn.pixabay.com/photo/2013/10/25/20/46/mosaic-200864_960_720.jpg") no-repeat content `,
+      // }}
+      >
+        <CardImage src={img} alt="Product Image" />
+      </CardImageWrapper>
+    </Card>
+  )
 }
 
 export default memo(ProductCard)
