@@ -25,7 +25,11 @@ export const LogoStyled = styled.div`
   margin-left: 60px;
   width: 200px;
   overflow: hidden;
-/`
+
+  ${({ theme }) => theme.desktop`
+      margin-left: 0;
+  `}
+`
 export const LogoNameStyled = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;

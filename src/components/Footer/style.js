@@ -6,13 +6,6 @@ export const FooterStyled = styled.footer`
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
   display: flex;
   justify-content: center;
-
-  ${({ theme }) => theme.desktop`
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        
-    `}
 `
 
 export const FooterContentStyled = styled.div`
@@ -20,6 +13,13 @@ export const FooterContentStyled = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  ${({ theme }) => theme.desktop`
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      
+  `}
 `
 
 export const FooterWrapperStyled = styled.div`
@@ -27,6 +27,10 @@ export const FooterWrapperStyled = styled.div`
   display: flex;
   color: #888f9b;
   align-items: center;
+
+  ${({ theme }) => theme.desktop`
+      padding: 10px 60px;
+  `}
 
   span {
     ${({ theme }) => theme.desktop`
