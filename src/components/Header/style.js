@@ -23,7 +23,7 @@ export const LogoStyled = styled.div`
   display: flex;
   align-items: center;
   margin-left: 60px;
-  width: 200px;
+  /* width: 200px; */
   overflow: hidden;
 
   ${({ theme }) => theme.desktop`
