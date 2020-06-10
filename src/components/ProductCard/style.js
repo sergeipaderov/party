@@ -12,10 +12,13 @@ export const Card = styled.div`
   ${({ theme }) => theme.extralarge`
     width: 21%;
   `}
-    ${({ theme }) => theme.large`
+    
+  ${({ theme }) => theme.large`
     width: 29%;
+    padding: 2%;
   `}
-    ${({ theme }) => theme.tablet`
+    
+  ${({ theme }) => theme.tablet`
     width: 100%;
   `};
 `
