@@ -39,6 +39,7 @@ function Header() {
         </MenuContentStyled>
         <MenuStyled show={show}>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/"
@@ -49,6 +50,7 @@ function Header() {
             Home
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/decor"
@@ -59,6 +61,7 @@ function Header() {
             Decor
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/sweets"
@@ -69,6 +72,7 @@ function Header() {
             Doces
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/flowers"
@@ -79,6 +83,7 @@ function Header() {
             Flores
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/photo"
@@ -89,6 +94,7 @@ function Header() {
             Foto
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/souvenirs"
@@ -99,6 +105,7 @@ function Header() {
             Lembrancinhas
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/animators"
@@ -109,6 +116,7 @@ function Header() {
             Animadores
           </MenuItemStyled>
           <MenuItemStyled
+            onClick={toggleMenu}
             exact
             activeClassName="active"
             to="/other"

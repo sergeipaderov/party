@@ -23,7 +23,6 @@ export const LogoStyled = styled.div`
   display: flex;
   align-items: center;
   margin-left: 60px;
-  /* width: 200px; */
   overflow: hidden;
 
   ${({ theme }) => theme.desktop`
@@ -82,19 +81,18 @@ export const MenuStyled = styled.nav`
   }
 
   @media (max-width: 1200px) {
-        display: ${({ show }) => (show ? 'block' : 'none')};
-        position: fixed;
-        z-index: 100;
-        background-color: ${({ theme }) => theme.primary};
-        top: 60px;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        padding: 0;
+    display: ${({ show }) => (show ? 'block' : 'none')};
+    position: fixed;
+    z-index: 100;
+    background-color: ${({ theme }) => theme.primary};
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 100px 0 0;
 
-        li {
-            width: 100%;
-        }
+    li {
+        width: 100%;
+    }
   }
 `
 
