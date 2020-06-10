@@ -33,3 +33,30 @@ export const CardImage = styled.img`
   border-radius: 5px;
   overflow: hidden;
 `
+
+export const CardInfo = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme }) => theme.secondary};
+  padding: 8px 0;
+`
+export const CardAutor = styled.span`
+  color: ${({ theme }) => theme.accent};
+  cursor: pointer;
+  margin-top: 2px;
+`
+
+export const CardButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const CardButton = styled.div`
+  color: ${({ theme }) => theme.accent};
+  border: 1px solid ${({ theme }) => theme.accent};
+  padding: 3px 10px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+`
