@@ -55,4 +55,9 @@ export const CardTitle = styled.h3`
   background-color: rgb(0, 0, 0, 0.6);
   box-shadow: 1px 1px 10px 10px rgb(0, 0, 0, 0.6);
   padding: 10px;
+
+  ${({ theme }) => theme.desktop`
+      font-size: 1rem;
+      
+  `}
 `
