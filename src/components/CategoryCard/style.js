@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const Card = styled.div`
   height: 260px;
-  width: 260px;
+  width: 98%;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
-  margin: 40px;
+  margin: 1%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const Card = styled.div`
     box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.accent};
   }
 
-  ${({ theme }) => theme.extralarge`
+  /* ${({ theme }) => theme.extralarge`
     width: 21%;
   `}
     
@@ -31,7 +31,7 @@ export const Card = styled.div`
     width: 98%;
     margin: 1%;
     box-shadow: none;
-  `};
+  `}; */
 `
 
 export const CardWrapper = styled.div`

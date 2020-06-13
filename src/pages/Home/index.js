@@ -10,14 +10,19 @@ class HomePage extends Component {
       <>
         <CardsWrapper>
           <CategoryCard
+            style={{ width: '48%' }}
             title="Decor"
             bg="https://cdn.pixabay.com/photo/2017/11/04/17/26/christmas-cookies-2918172__480.jpg"
           />
           <CategoryCard
+            style={{ width: '48%' }}
             title="Doces"
             bg="https://cdn.pixabay.com/photo/2015/03/26/23/09/cake-pops-693645_1280.jpg"
           />
+        </CardsWrapper>
+        <CardsWrapper>
           <CategoryCard
+            style={{ width: '98% !important' }}
             title="Flores"
             bg="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg"
           />
