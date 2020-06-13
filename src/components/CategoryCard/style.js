@@ -43,12 +43,16 @@ export const CardWrapper = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  justify-content: space-between;
-  height: 92%;
+  /* padding: 10px; */
+  justify-content: flex-end;
+  height: 100%;
 `
 
 export const CardTitle = styled.h3`
   font-size: 1.6rem;
-  color: ${({ theme }) => theme.third};
+  /* color: ${({ theme }) => theme.third}; */
+  color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 10px 10px rgb(0, 0, 0, 0.6);
+  padding: 10px;
 `
