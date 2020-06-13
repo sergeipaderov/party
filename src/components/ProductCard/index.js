@@ -1,5 +1,8 @@
 import React, { memo } from 'react'
 
+import CustomButton from '../CustomButton'
+import theme from '../../assets/styles/theme'
+
 import {
   Card,
   CardImageWrapper,
@@ -11,6 +14,7 @@ import {
 } from './style'
 
 const ProductCard = ({ img, title, autor }) => {
+  console.log(theme)
   return (
     <Card>
       <CardImageWrapper>
@@ -20,9 +24,7 @@ const ProductCard = ({ img, title, autor }) => {
         <span>{title}</span>
         <CardAutor>{autor}</CardAutor>
       </CardInfo>
-      <CardButtonWrapper>
-        <CardButton>Ver Mais</CardButton>
-      </CardButtonWrapper>
+      <CustomButton color={theme.accent} text="Ver Mais" />
     </Card>
   )
 }

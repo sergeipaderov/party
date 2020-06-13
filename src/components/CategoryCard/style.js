@@ -2,15 +2,17 @@ import styled from 'styled-components'
 
 export const Card = styled.div`
   height: 260px;
-  border-radius: 5px;
+  width: 260px;
+  border-radius: 10px;
   background-color: #fff;
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
-  margin: 10px;
-  padding: .5% .5% .8%;
-  width: 21%;
+  margin: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &:hover {
     box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.accent};
@@ -26,34 +28,27 @@ export const Card = styled.div`
   `}
     
   ${({ theme }) => theme.tablet`
-    width: 100%;
+    width: 98%;
+    margin: 1%;
+    box-shadow: none;
   `};
 `
 
-export const CardImageWrapper = styled.div`
+export const CardWrapper = styled.div`
   width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-  height: 40%;
-  height: 70%;
-  max-height: 160px;
+  height: 100%;
+  /* background-color: rgb(255, 255, 255); */
 `
 
-export const CardImage = styled.img`
-  width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-`
-
-export const CardInfo = styled.div`
-  width: 100%;
+export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  color: ${({ theme }) => theme.secondary};
-  padding: 0 0 8px 0;
+  padding: 10px;
+  justify-content: space-between;
+  height: 92%;
 `
-export const CardAutor = styled.span`
-  color: ${({ theme }) => theme.accent};
-  cursor: pointer;
-  margin-top: 2px;
+
+export const CardTitle = styled.h3`
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.third};
 `

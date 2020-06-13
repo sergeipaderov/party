@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export const HeaderStyled = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.primary};
-  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
+  /* box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow}; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ export const MenuContentStyled = styled.div`
   height: 60px;
   padding: 0 10px;
   justify-content: space-between;
-  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
+  /* box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow}; */
 
   @media (max-width: 1200px) {
     display: flex;
@@ -74,6 +74,7 @@ export const MenuStyled = styled.nav`
   list-style: none;
   margin: 0;
   overflow: hidden;
+  /* font-size: 1.1rem; */
   font-size: 1.1rem;
   display: flex;
   justify-content: flex-end;
