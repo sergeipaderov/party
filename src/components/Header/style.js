@@ -22,7 +22,7 @@ export const LogoStyled = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 10px;
   overflow: hidden;
 
   ${({ theme }) => theme.desktop`
@@ -78,7 +78,7 @@ export const MenuStyled = styled.nav`
   font-size: 1.1rem;
   display: flex;
   justify-content: flex-end;
-  padding: 0 60px;
+  padding: 0;
   }
 
   @media (max-width: 1200px) {

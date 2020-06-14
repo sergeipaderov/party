@@ -23,7 +23,7 @@ export const FooterContentStyled = styled.div`
 `
 
 export const FooterWrapperStyled = styled.div`
-  padding: 20px 60px;
+  padding: 20px 0 20px 20px;
   display: flex;
   color: #888f9b;
   align-items: center;
