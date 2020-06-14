@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Fade from 'react-reveal/Fade'
 import RubberBand from 'react-reveal/RubberBand'
+
 import CategoryCard from '../../components/CategoryCard'
 
 import { CardsWrapper, CardLink, CardsSection } from './style'
