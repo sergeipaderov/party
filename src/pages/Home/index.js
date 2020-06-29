@@ -1,32 +1,32 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import Fade from 'react-reveal/Fade'
-import RubberBand from 'react-reveal/RubberBand'
+// import RubberBand from 'react-reveal/RubberBand'
 
 import CategoryCard from '../../components/CategoryCard'
 
 import { CardsWrapper, CardLink, CardsSection } from './style'
 
-class HomePage extends Component {
+class HomePage extends PureComponent {
   render() {
     return (
       <>
-        <RubberBand>
-          <div
-            style={{
-              borderRadius: '5px',
-              width: '100%',
-              height: '600px',
-              margin: '0 20px',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2016/10/22/20/52/balloons-1761634_960_720.jpg')`,
-            }}
-          >
-            Some stuff
-          </div>
-        </RubberBand>
+        {/* <RubberBand> */}
+        {/* <div
+          style={{
+            borderRadius: '5px',
+            width: '100%',
+            height: '600px',
+            margin: '0 20px',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundImage: `url('https://cdn.pixabay.com/photo/2016/10/22/20/52/balloons-1761634_960_720.jpg')`,
+          }}
+        >
+          Some stuff
+        </div> */}
+        {/* </RubberBand> */}
 
         <CardsSection>
           <Fade left>

@@ -11,6 +11,7 @@ import PhotoPage from './pages/Photo'
 import SouvenirsPage from './pages/Souvenirs'
 import AnimatorsPage from './pages/Animators'
 import OtherPage from './pages/Other'
+import AdminPage from './pages/Admin'
 
 import './App.css'
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/souvenirs" exact component={SouvenirsPage} />
             <Route path="/animators" exact component={AnimatorsPage} />
             <Route path="/other" exact component={OtherPage} />
+            <Route path="/admin" exact component={AdminPage} />
             <Redirect to="/" />
           </Switch>
         </main>

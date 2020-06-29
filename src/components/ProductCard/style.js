@@ -12,10 +12,6 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  &:hover {
-    box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.accent};
-  }
-
   ${({ theme }) => theme.extralarge`
     width: 21%;
   `}

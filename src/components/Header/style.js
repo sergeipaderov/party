@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 
 export const HeaderStyled = styled.header`
   width: 100%;
-  background-color: ${({ theme }) => theme.primary};
   /* box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow}; */
   position: relative;
   display: flex;

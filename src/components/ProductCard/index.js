@@ -6,7 +6,6 @@ import theme from '../../assets/styles/theme'
 import { Card, CardImageWrapper, CardImage, CardInfo, CardAutor } from './style'
 
 const ProductCard = ({ img, title, autor }) => {
-  console.log(theme)
   return (
     <Card>
       <CardImageWrapper>
