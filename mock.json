@@ -1,0 +1,68 @@
+{
+  "products": [
+  {
+    "id": 0,
+    "title": "Product 1",
+    "autor": "Donald Duck",
+    "autor_id": 0,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2013/10/25/20/46/mosaic-200864_960_720.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Product 2",
+    "autor": "Donald Duck",
+    "autor_id": 1,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2012/03/03/23/02/autumn-21498_960_720.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Product 3",
+    "autor": "Donald Duck",
+    "autor_id": 2,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2019/03/31/19/47/hare-4093851_960_720.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Product 4",
+    "autor": "Donald Duck",
+    "autor_id": 3,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2013/03/19/23/07/easter-bunny-95096_960_720.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Product 5",
+    "autor": "Donald Duck",
+    "autor_id": 4,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2020/03/09/17/03/spring-4916430_960_720.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Product 6",
+    "autor": "Donald Duck",
+    "autor_id": 5,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2016/11/23/14/37/baked-goods-1853261_960_720.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Product 7",
+    "autor": "Donald Duck",
+    "autor_id": 6,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2015/03/26/09/39/cupcakes-690040_960_720.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Product 8",
+    "autor": "Donald Duck",
+    "autor_id": 7,
+    "desc": "Description of one beautiful product on this web page",
+    "img": "https://cdn.pixabay.com/photo/2014/09/22/00/57/chinese-lantern-455760_960_720.jpg"
+  }
+]
+}

@@ -10,6 +10,7 @@ import {
   MenuItemStyled,
   LogoNameStyled,
   HeaderContentWrapperStyled,
+  CloseMenuIcon,
 } from './style'
 
 function Header() {
@@ -38,6 +39,7 @@ function Header() {
           <MenuIconStyled onClick={toggleMenu} src={menu} width="28px" />
         </MenuContentStyled>
         <MenuStyled show={show}>
+          <CloseMenuIcon onClick={toggleMenu} />
           <MenuItemStyled
             onClick={toggleMenu}
             exact
