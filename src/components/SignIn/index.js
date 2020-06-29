@@ -1,16 +1,14 @@
 import React from 'react'
-import { NavLink, withRouter, useHistory } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import {
   Box,
-  // Link,
   InputLabel,
   Input,
   FormHelperText,
   FormControl,
   InputAdornment,
   IconButton,
-  // Button,
 } from '@material-ui/core'
 
 import Visibility from '@material-ui/icons/Visibility'
@@ -63,10 +61,10 @@ class SignInForm extends React.PureComponent {
     }
 
     if (hasError) return
-    const sendingObject = {
-      email: email.value,
-      password: password.value,
-    }
+    // const sendingObject = {
+    //   email: email.value,
+    //   password: password.value,
+    // }
 
     // this.setState({ loading: true }, () => {
     //   this.props.createSession(sendingObject).then(() => {
@@ -106,8 +104,8 @@ class SignInForm extends React.PureComponent {
       email,
       password,
       showPasswordSymbols,
-      showResponseError,
-      errorMessage,
+      // showResponseError,
+      // errorMessage,
       loading,
     } = this.state
     return (
