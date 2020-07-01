@@ -98,11 +98,16 @@ export const MenuStyled = styled.nav`
 `
 
 export const CloseMenuIcon = styled(CloseIcon)`
+  display: none;
   width: 24px;
   height: 24px;
   position: absolute;
   top: 20px;
   right: 20px;
+
+  @media (max-width: 1200px) {
+    display: ${({ show }) => (show ? 'block' : 'none')};
+  }
 `
 
 export const MenuItemStyled = styled(NavLink)`
