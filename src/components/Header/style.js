@@ -106,7 +106,7 @@ export const CloseMenuIcon = styled(CloseIcon)`
   right: 20px;
 
   @media (max-width: 1200px) {
-    display: ${({ show }) => (show ? 'block' : 'none')};
+    display: block;
   }
 `
 
