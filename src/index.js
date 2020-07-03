@@ -26,7 +26,7 @@ ReactDOM.render(
     {/* <GlobalStyle /> */}
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <App />
       </BrowserRouter>
     </ThemeProvider>

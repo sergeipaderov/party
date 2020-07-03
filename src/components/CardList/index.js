@@ -35,7 +35,7 @@ function CardLIst() {
         autor="Abraam Linkoln"
       />
       <ProductCard
-        img="https://cdn.pixabay.com/photo/2020/03/09/17/03/spring-4916430_960_720.jpg"
+        img="https://cdn.pixabay.com/photo/2014/06/30/11/40/birthday-cake-380178_960_720.jpg"
         title="Melhor coisa"
         autor="Abraam Linkoln"
       />

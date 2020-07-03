@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 // import Reveal from 'react-reveal/Reveal'
 
 import CardList from '../../components/CardList'
 
-class DecorPage extends Component {
+class DecorPage extends PureComponent {
   render() {
     return (
       <>
