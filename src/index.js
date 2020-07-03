@@ -7,7 +7,7 @@ import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
 import { ThemeProvider } from '@material-ui/styles'
-import { CssBaseline } from '@material-ui/core'
+// import { CssBaseline } from '@material-ui/core'
 
 import theme from './assets/styles/theme'
 
