@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg'
+import theme from '../../assets/styles/theme'
 
 export const HeaderStyled = styled.header`
   width: 100%;
-  /* box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow}; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,9 +25,9 @@ export const LogoStyled = styled.div`
   margin-left: 10px;
   overflow: hidden;
 
-  ${({ theme }) => theme.desktop`
-      margin-left: 0;
-  `}
+  @media (max-width: 992px) {
+    margin-left: 0;
+  }
 `
 export const LogoNameStyled = styled(NavLink)`
   text-decoration: none;
@@ -38,7 +38,7 @@ export const LogoNameStyled = styled(NavLink)`
 
   h1 {
     font-size: 1.6rem;
-    color: ${({ theme }) => theme.accent};
+    color: ${theme.palette.color.accent};
     margin-left: 10px;
     font-family: 'Pacifico', cursive;
     white-space: nowrap;
@@ -50,7 +50,7 @@ export const MenuContentStyled = styled.div`
   position: absolute;
   z-index: 4;
   width: 100%;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${theme.palette.color.primary};
   display: none;
   height: 60px;
   padding: 0 10px;
@@ -85,7 +85,7 @@ export const MenuStyled = styled.nav`
     display: ${({ show }) => (show ? 'block' : 'none')};
     position: fixed;
     z-index: 100;
-    background-color: ${({ theme }) => theme.primary};
+    background-color: ${theme.palette.color.primary};
     overflow: hidden;
     height: 100%;
     width: 100%;
@@ -112,7 +112,7 @@ export const CloseMenuIcon = styled(CloseIcon)`
 
 export const MenuItemStyled = styled(NavLink)`
   display: block;
-  color: ${({ theme }) => theme.secondary};
+  color: ${theme.palette.color.secondary};
   text-align: center;
   padding: 16px;
   outline: none;
@@ -121,7 +121,7 @@ export const MenuItemStyled = styled(NavLink)`
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.accent};
+    color: ${theme.palette.color.accent};
     transition: 0.8s;
   }
 `

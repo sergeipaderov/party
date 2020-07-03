@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import theme from '../../assets/styles/theme'
 
 export const Card = styled.div`
   height: 260px;
   width: 100%;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
+  box-shadow: 1px 1px 10px 1px ${theme.palette.color.shadow};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +16,7 @@ export const Card = styled.div`
   background-size: cover;
 
   &:hover {
-    box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.accent};
+    box-shadow: 1px 1px 10px 1px ${theme.palette.color.accent};
   }
 `
 
@@ -38,8 +39,7 @@ export const CardTitle = styled.h3`
   box-shadow: 1px 1px 10px 10px rgb(0, 0, 0, 0.6);
   padding: 10px;
 
-  ${({ theme }) => theme.desktop`
-      font-size: 1rem;
-      
-  `}
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
 `

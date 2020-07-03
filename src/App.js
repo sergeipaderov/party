@@ -12,7 +12,7 @@ import PhotoPage from './pages/Photo'
 import SouvenirsPage from './pages/Souvenirs'
 import AnimatorsPage from './pages/Animators'
 import OtherPage from './pages/Other'
-import AdminPage from './pages/Admin'
+import LoginPage from './pages/Login'
 
 import './App.css'
 
@@ -60,7 +60,7 @@ class App extends Component {
               <Route path="/souvenirs" exact component={SouvenirsPage} />
               <Route path="/animators" exact component={AnimatorsPage} />
               <Route path="/other" exact component={OtherPage} />
-              <Route path="/admin" exact component={AdminPage} />
+              <Route path="/login" exact component={LoginPage} />
               <Redirect to="/" />
             </Switch>
           </main>

@@ -14,12 +14,11 @@ export const FooterContentStyled = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  ${({ theme }) => theme.desktop`
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: center;
-      
-  `}
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const FooterWrapperStyled = styled.div`
@@ -28,13 +27,13 @@ export const FooterWrapperStyled = styled.div`
   color: #888f9b;
   align-items: center;
 
-  ${({ theme }) => theme.desktop`
-      padding: 10px 60px;
-  `}
+  @media (max-width: 992px) {
+    padding: 10px 60px;
+  }
 
   span {
-    ${({ theme }) => theme.desktop`
-        text-align: center;
-    `}
+    @media (max-width: 992px) {
+      text-align: center;
+    }
   }
 `

@@ -3,7 +3,7 @@ import { Container } from '@material-ui/core'
 
 import SignInForm from '../../components/SignIn'
 
-class AdminPage extends PureComponent {
+class LoginPage extends PureComponent {
   render() {
     return (
       <>
@@ -15,4 +15,4 @@ class AdminPage extends PureComponent {
   }
 }
 
-export default AdminPage
+export default LoginPage
