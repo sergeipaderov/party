@@ -14,7 +14,6 @@ import AnimatorsPage from './pages/Animators'
 import OtherPage from './pages/Other'
 import LoginPage from './pages/Login'
 import FirebaseContext from './context/firebaseContext'
-import { PrivateRoute } from './utils/privateRoute'
 
 import './App.css'
 
