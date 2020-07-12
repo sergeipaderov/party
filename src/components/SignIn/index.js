@@ -1,5 +1,6 @@
-import React from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { useState, useEffect, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import {
   Container,
   Button,
@@ -9,13 +10,56 @@ import {
 } from '@material-ui/core'
 
 import useStyles from './style'
+import FirebaseContext from '../../context/firebaseContext'
 
 const SignInForm = () => {
   const classes = useStyles()
+  const history = useHistory()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true)
+  const [helperText, setHelperText] = useState('')
+  const [error, setError] = useState(false)
+  // const firebase = useContext(FirebaseContext)
+  const { setUserUid, signWithEmail } = useContext(FirebaseContext)
+  // const dispatch = useDispatch()
+  // const userUid = useSelector((state) => state.userUid)
+  // const name = useSelector((state) => state.name)
 
-  const onClick = (event) => {
-    event.preventDefault()
-    console.log('onClick')
+  useEffect(() => {
+    if (email.trim() && password.trim()) {
+      setIsButtonDisabled(false)
+    } else {
+      setIsButtonDisabled(true)
+    }
+  }, [email, password])
+
+  const onClick = (e) => {
+    e.preventDefault()
+
+    signWithEmail(email, password)
+      .then((res) => {
+        setUserUid(res.user.uid)
+        localStorage.setItem('user', res.user.uid)
+        history.push('/')
+      })
+      .catch((err) => {
+        setError(true)
+        setHelperText('Incorrect username or password')
+      })
+
+    // if (email === '123@gmail.com' && password === '123') {
+    //   history.push('/')
+    // } else {
+    //   setError(true)
+    //   setHelperText('Incorrect username or password')
+    // }
+  }
+
+  const handleKeyPress = (e) => {
+    if (e.keyCode === 13 || e.which === 13) {
+      isButtonDisabled || onClick(e)
+    }
   }
 
   return (
@@ -27,6 +71,7 @@ const SignInForm = () => {
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
+            error={error}
             margin="normal"
             required
             fullWidth
@@ -35,8 +80,12 @@ const SignInForm = () => {
             name="email"
             autoComplete="email"
             autoFocus
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyPress={(e) => handleKeyPress(e)}
           />
           <TextField
+            error={error}
             margin="normal"
             required
             fullWidth
@@ -45,6 +94,9 @@ const SignInForm = () => {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={(e) => setPassword(e.target.value)}
+            onKeyPress={(e) => handleKeyPress(e)}
+            helperText={helperText}
           />
           <Button
             type="submit"
@@ -53,6 +105,7 @@ const SignInForm = () => {
             color="primary"
             className={classes.submit}
             onClick={onClick}
+            disabled={isButtonDisabled}
           >
             Sign In
           </Button>
@@ -62,4 +115,4 @@ const SignInForm = () => {
   )
 }
 
-export default withRouter(SignInForm)
+export default SignInForm

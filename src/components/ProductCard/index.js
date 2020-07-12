@@ -15,7 +15,7 @@ const ProductCard = ({ img, title, autor }) => {
         <span>{title}</span>
         <CardAutor>{autor}</CardAutor>
       </CardInfo>
-      <CustomButton color={theme.accent} text="Ver Mais" />
+      <CustomButton color={theme.palette.color.accent} text="Ver Mais" />
     </Card>
   )
 }

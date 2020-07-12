@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useState, useEffect } from 'react'
 import logo from '../../assets/images/logo.svg'
 import menu from '../../assets/icons/menu.svg'
 import {
@@ -15,6 +15,14 @@ import {
 
 function Header() {
   const [show, setShow] = useState(false)
+  const [isAdmin, setAdmin] = useState(false)
+
+  useEffect(() => {
+    const admin = localStorage.getItem('user')
+    if (admin) {
+      setAdmin(true)
+    }
+  }, [isAdmin])
 
   const toggleMenu = () => {
     setShow(!show)
@@ -128,6 +136,19 @@ function Header() {
           >
             Outros
           </MenuItemStyled>
+          {isAdmin ? (
+            <MenuItemStyled
+              onClick={toggleMenu}
+              exact
+              activeClassName="active"
+              to="/other"
+              activeStyle={{
+                color: '#1F2633',
+              }}
+            >
+              Log Out
+            </MenuItemStyled>
+          ) : null}
         </MenuStyled>
       </HeaderContentWrapperStyled>
     </HeaderStyled>

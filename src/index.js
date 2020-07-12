@@ -7,6 +7,9 @@ import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
 import { ThemeProvider } from '@material-ui/styles'
+import FirebaseContext from './context/firebaseContext'
+import Firebase from './services/firebase'
+
 // import { CssBaseline } from '@material-ui/core'
 
 import theme from './assets/styles/theme'
@@ -25,10 +28,12 @@ ReactDOM.render(
   <Provider store={store}>
     {/* <GlobalStyle /> */}
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        {/* <CssBaseline /> */}
-        <App />
-      </BrowserRouter>
+      <FirebaseContext.Provider value={new Firebase()}>
+        <BrowserRouter>
+          {/* <CssBaseline /> */}
+          <App />
+        </BrowserRouter>
+      </FirebaseContext.Provider>
     </ThemeProvider>
   </Provider>,
   document.getElementById('root')
