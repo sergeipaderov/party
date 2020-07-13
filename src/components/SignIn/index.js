@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-// import { useSelector, useDispatch } from 'react-redux'
 import {
   Container,
   Button,
@@ -20,11 +19,7 @@ const SignInForm = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true)
   const [helperText, setHelperText] = useState('')
   const [error, setError] = useState(false)
-  // const firebase = useContext(FirebaseContext)
   const { setUserUid, signWithEmail } = useContext(FirebaseContext)
-  // const dispatch = useDispatch()
-  // const userUid = useSelector((state) => state.userUid)
-  // const name = useSelector((state) => state.name)
 
   useEffect(() => {
     if (email.trim() && password.trim()) {
@@ -47,13 +42,6 @@ const SignInForm = () => {
         setError(true)
         setHelperText('Incorrect username or password')
       })
-
-    // if (email === '123@gmail.com' && password === '123') {
-    //   history.push('/')
-    // } else {
-    //   setError(true)
-    //   setHelperText('Incorrect username or password')
-    // }
   }
 
   const handleKeyPress = (e) => {

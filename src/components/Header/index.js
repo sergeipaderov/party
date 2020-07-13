@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import logo from '../../assets/images/logo.svg'
 import menu from '../../assets/icons/menu.svg'
 import {
@@ -13,19 +13,28 @@ import {
   CloseMenuIcon,
 } from './style'
 
+import FirebaseContext from '../../context/firebaseContext'
+
 function Header() {
   const [show, setShow] = useState(false)
   const [isAdmin, setAdmin] = useState(false)
+  const { signOut } = useContext(FirebaseContext)
+
+  const admin = localStorage.getItem('user')
 
   useEffect(() => {
-    const admin = localStorage.getItem('user')
     if (admin) {
       setAdmin(true)
     }
-  }, [isAdmin])
+  }, [admin, isAdmin])
 
   const toggleMenu = () => {
     setShow(!show)
+  }
+
+  const logOut = () => {
+    localStorage.removeItem('user')
+    signOut().then(setAdmin(false)).then(setShow(!show))
   }
 
   return (
@@ -138,10 +147,10 @@ function Header() {
           </MenuItemStyled>
           {isAdmin ? (
             <MenuItemStyled
-              onClick={toggleMenu}
+              onClick={logOut}
               exact
-              activeClassName="active"
-              to="/other"
+              // activeClassName="active"
+              to="/"
               activeStyle={{
                 color: '#1F2633',
               }}
@@ -155,4 +164,4 @@ function Header() {
   )
 }
 
-export default memo(Header)
+export default Header

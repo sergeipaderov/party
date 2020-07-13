@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import theme from '../../assets/styles/theme'
 
 export const FooterStyled = styled.footer`
   width: 100%;
-  background-color: ${({ theme }) => theme.primary};
-  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.shadow};
+  background-color: ${theme.palette.color.primary};
+  box-shadow: 1px 1px 10px 1px ${theme.palette.color.shadow};
   display: flex;
   justify-content: center;
 `
